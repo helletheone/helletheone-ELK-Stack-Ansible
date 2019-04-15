@@ -1,0 +1,14 @@
+---
+#
+# Playbook to install Java + ELK stack + Topbeat or Metricbeat
+#
+- hosts: elkservers
+  roles:
+  - { role: java }
+  - { role: ansible-curl }
+  - { role: elasticsearch }
+  - { role: kibana }
+  - { role: logstash }
+  - { role: ansible-role-metricbeat }
+ # - { role: topbeat - depecated }
+
